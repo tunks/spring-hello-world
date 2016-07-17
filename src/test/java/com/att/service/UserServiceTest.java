@@ -77,11 +77,10 @@ public class UserServiceTest {
     @Test
     public void testDeleteUser() {
         System.out.println("deleteUser");
-        String id = "";
-        UserService instance = new UserService();
-        instance.deleteUser(id);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String id = "1001";
+        userService.deleteUser(id);
+        User user = userService.findUser(id);
+        assertNotNull(user);
     }
     
     
@@ -91,11 +90,13 @@ public class UserServiceTest {
     @Test
     public void testFindUser() {
         System.out.println("deleteUser");
-        String id = "";
-        UserService instance = new UserService();
-        instance.deleteUser(id);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String id = "10002";
+        User user = new User(id,"User2");
+        userService.addUser(user);
+        User expectedUser = userService.findUser(id);
+        assertNotNull(expectedUser);
+        assertEquals(user,expectedUser);
+        
     }
     
 }
