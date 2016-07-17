@@ -70,7 +70,6 @@ public class UserServiceTest {
      */
     @Test
     public void testAddUser() {
-        System.out.println("addUser");
         User user = new User("2001","User201");
         User result = userService.addUser(user);
         assertEquals(user, result);
@@ -81,7 +80,6 @@ public class UserServiceTest {
      */
     @Test
     public void testDeleteUser() {
-        System.out.println("deleteUser");
         String id = "1001";
         userService.deleteUser(id);
         User user = userService.findUser(id);
@@ -94,7 +92,6 @@ public class UserServiceTest {
      */
     @Test
     public void testFindUser() {
-        System.out.println("deleteUser");
         String id = "10002";
         User user = new User(id,"User2");
         userService.addUser(user);
