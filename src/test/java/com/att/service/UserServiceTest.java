@@ -45,6 +45,8 @@ public class UserServiceTest {
     
     @Before
     public void setUp() {
+        User user = new User("1001","User1");
+        userService.addUser(user);
     }
     
     @After
@@ -69,7 +71,7 @@ public class UserServiceTest {
     @Test
     public void testAddUser() {
         System.out.println("addUser");
-        User user = new User("1001","User1");
+        User user = new User("2001","User201");
         User result = userService.addUser(user);
         assertEquals(user, result);
     }
@@ -83,7 +85,7 @@ public class UserServiceTest {
         String id = "1001";
         userService.deleteUser(id);
         User user = userService.findUser(id);
-        assertNotNull(user);
+        assertNull(user);
     }
     
     
