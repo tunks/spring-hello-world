@@ -1,22 +1,24 @@
 package com.att.service;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import org.springframework.stereotype.Service;
 import com.att.model.User;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 @Service("userService")
 public class UserService {
-    private final Map<String, User> userStore = new HashMap();
+    private final ConcurrentMap<String, User> userStore = new ConcurrentHashMap();
 
     public List<User> allUsers() {
         return new ArrayList(userStore.values());
     }
 
     public User addUser(User user) {
-        return userStore.put(user.getId(), user);
+           String id = user.getId();
+           userStore.put(id, user);
+           return userStore.get(id);
     }
 
     public void deleteUser(String id) {
