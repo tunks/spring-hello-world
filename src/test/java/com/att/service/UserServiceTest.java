@@ -99,7 +99,6 @@ public class UserServiceTest {
         User expectedUser = userService.findUser(id);
         assertNotNull(expectedUser);
         assertEquals(user,expectedUser);
-        
     }
     
 }
