@@ -70,7 +70,7 @@ public class UserServiceTest {
      */
     @Test
     public void testAddUser() {
-        User user = new User("3001","User20111");
+        User user = new User("3001","Use30111");
         User result = userService.addUser(user);
         assertEquals(user, result);
     }
