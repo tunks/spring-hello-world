@@ -9,8 +9,7 @@ import com.att.model.User;
 
 @Service("userService")
 public class UserService {
-
-    private Map<String, User> userStore = new HashMap();
+    private final Map<String, User> userStore = new HashMap();
 
     public List<User> allUsers() {
         return new ArrayList(userStore.values());
