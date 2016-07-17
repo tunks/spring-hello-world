@@ -1,0 +1,101 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.att.service;
+
+import com.att.SpringHelloWorldApplication;
+import com.att.model.User;
+import java.util.List;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
+
+/**
+ *
+ * @author ebrimatunkara
+ */
+@RunWith(SpringJUnit4ClassRunner.class) 
+@SpringApplicationConfiguration(SpringHelloWorldApplication.class)
+@WebAppConfiguration 
+public class UserServiceTest {
+    @Autowired
+    UserService userService;
+    
+    public UserServiceTest() {
+    }
+    
+    @BeforeClass
+    public static void setUpClass() {
+    }
+    
+    @AfterClass
+    public static void tearDownClass() {
+    }
+    
+    @Before
+    public void setUp() {
+    }
+    
+    @After
+    public void tearDown() {
+    }
+
+    /**
+     * Test of allUsers method, of class UserService.
+     */
+    @Test
+    public void testAllUsers() {
+        System.out.println("allUsers");
+        List<User> result = userService.allUsers();
+        assertTrue(result.size() >0);
+    }
+
+    /**
+     * Test of addUser method, of class UserService.
+     */
+    @Test
+    public void testAddUser() {
+        System.out.println("addUser");
+        User user = new User("1001","User1");
+        User result = userService.addUser(user);
+        assertEquals(user, result);
+    }
+
+    /**
+     * Test of deleteUser method, of class UserService.
+     */
+    @Test
+    public void testDeleteUser() {
+        System.out.println("deleteUser");
+        String id = "";
+        UserService instance = new UserService();
+        instance.deleteUser(id);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+    
+    
+      /**
+     * Test of FindUser method, of class UserService.
+     */
+    @Test
+    public void testFindUser() {
+        System.out.println("deleteUser");
+        String id = "";
+        UserService instance = new UserService();
+        instance.deleteUser(id);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+    
+}
