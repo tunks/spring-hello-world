@@ -5,7 +5,7 @@
  */
 package com.att.service;
 
-import com.att.SpringHelloWorldApplication;
+import com.att.HelloWorldApplication;
 import com.att.model.User;
 import java.util.List;
 import org.junit.After;
@@ -25,7 +25,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
  * @author ebrimatunkara
  */
 @RunWith(SpringJUnit4ClassRunner.class) 
-@SpringApplicationConfiguration(SpringHelloWorldApplication.class)
+@SpringApplicationConfiguration(HelloWorldApplication.class)
 @WebAppConfiguration 
 public class UserServiceTest {
    
