@@ -8,7 +8,8 @@ public class User implements Serializable{
     private String name;
     /**
      * Default constructor
-     **/
+     * Necessary to instantiate POJO instances by without parameters
+     */
     public User(){}
     
     public User(String id, String name) {
