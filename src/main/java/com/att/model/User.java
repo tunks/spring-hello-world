@@ -6,10 +6,10 @@ import java.util.Objects;
 public class User implements Serializable{
     private String id;
     private String name;
-
-    public User(){
-    
-    }
+    /**
+     * Default constructor
+     **/
+    public User(){}
     
     public User(String id, String name) {
         this.id = id;
