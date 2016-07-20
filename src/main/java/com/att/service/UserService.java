@@ -10,7 +10,10 @@ import java.util.concurrent.ConcurrentMap;
 @Service("userService")
 public class UserService {
     private final ConcurrentMap<String, User> userStore = new ConcurrentHashMap();
-
+    /**
+     * Get all users
+     * @return, return user
+     */
     public List<User> allUsers() {
         return new ArrayList(userStore.values());
     }
