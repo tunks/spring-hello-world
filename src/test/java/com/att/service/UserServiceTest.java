@@ -28,7 +28,6 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @SpringApplicationConfiguration(HelloWorldApplication.class)
 @WebAppConfiguration 
 public class UserServiceTest {
-   
     @Autowired
     UserService userService;
     
@@ -58,7 +57,6 @@ public class UserServiceTest {
      */
     @Test
     public void testAllUsers() {
-        System.out.println("allUsers");
         List<User> result = userService.allUsers();
         if(result != null){
          assertTrue(result.isEmpty());
