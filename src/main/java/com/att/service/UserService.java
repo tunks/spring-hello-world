@@ -27,7 +27,10 @@ public class UserService {
            userStore.put(id, user);
            return userStore.get(id);
     }
-
+    /**
+     * Delete user
+     * @param id
+     */
     public void deleteUser(String id) {
         userStore.remove(id);
     }
