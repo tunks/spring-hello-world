@@ -17,7 +17,11 @@ public class UserService {
     public List<User> allUsers() {
         return new ArrayList(userStore.values());
     }
-
+    /**
+     * Add user
+     * @param user
+     * @return,return user object
+     */
     public User addUser(User user) {
            String id = user.getId();
            userStore.put(id, user);
