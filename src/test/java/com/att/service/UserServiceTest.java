@@ -61,7 +61,7 @@ public class UserServiceTest {
         System.out.println("allUsers");
         List<User> result = userService.allUsers();
         if(result != null){
-         assertTrue(result.size() >0);
+         assertTrue(result.isEmpty());
         }
     }
 
