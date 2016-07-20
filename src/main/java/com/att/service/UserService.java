@@ -34,7 +34,9 @@ public class UserService {
     public void deleteUser(String id) {
         userStore.remove(id);
     }
-    
+    /**
+     * Find user
+     */
     public User findUser(String id){
         return userStore.get(id);
     }
