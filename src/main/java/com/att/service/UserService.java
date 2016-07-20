@@ -35,7 +35,9 @@ public class UserService {
         userStore.remove(id);
     }
     /**
-     * Find user
+     * Find user and return user
+     * @param id
+     * @return 
      */
     public User findUser(String id){
         return userStore.get(id);
