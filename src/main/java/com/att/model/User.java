@@ -2,7 +2,10 @@ package com.att.model;
 
 import java.io.Serializable;
 import java.util.Objects;
-
+/**
+ * User Model Entity
+ * @author ebrimatunkara
+ */
 public class User implements Serializable{
     private String id;
     private String name;
@@ -16,8 +19,6 @@ public class User implements Serializable{
         this.id = id;
         this.name = name;
     }
-
-    
     public String getId() {
         return id;
     }
