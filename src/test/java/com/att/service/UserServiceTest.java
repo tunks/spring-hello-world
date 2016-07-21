@@ -58,9 +58,7 @@ public class UserServiceTest {
     @Test
     public void testAllUsers() {
         List<User> result = userService.allUsers();
-        if(result != null){
-         assertTrue(result.isEmpty());
-        }
+        assertTrue(!result.isEmpty());
     }
 
     /**
